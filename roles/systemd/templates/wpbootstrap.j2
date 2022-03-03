@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#script to run at first boot via Openstack using the user_data and cloud-init
+
+#echo "Installing Ansible"
+#sudo apt-get install -y ansible
+
+touch /home/ubuntu/readme.txt
+echo " hello, world! Can you see my message" >> /home/ubuntu/readme.txt
+
+exit 0

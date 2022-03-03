@@ -1,0 +1,12 @@
+[Unit]
+Description=wpbootstrap
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nohup /usr/bin/wpbootstrap.sh
+Type=simple
+PIDFile=/var/run/wpbootstrap.pid
+
+[Install]
+WantedBy=multi-user.target
