@@ -10,5 +10,5 @@
   cron:
      name: "autostart"
      special_time: reboot
-     job: /usr/bin/startwpbootservice.sh
+     job: sleep 20 && /usr/bin/startwpbootservice.sh
 
