@@ -1,7 +1,5 @@
 #!/bin/bash
 
-systemctl start wpbootstrap.service
-
 su - ubuntu << EOF
 
 echo "cloning repo with Wordpress Playbook"
@@ -14,6 +12,8 @@ ansible-galaxy install -r requirements.yml
 echo "run ansible-playbook"
 cd /tmp/app
 ansible-playbook -i inventory setup.yml -b 
+
+sudo reboot
 
 exit 0
 
