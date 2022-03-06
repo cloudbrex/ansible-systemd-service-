@@ -1,6 +1,6 @@
 [Unit]
 Description=wpbootstrap
-After=cloud-config.service rc-local.service
+After=rc-local.service network-online.target cloud-config.service basic.target system.slice systemd-journald.socket syslog.target
 
 [Service]
 Type=oneshot

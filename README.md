@@ -1,4 +1,4 @@
-# ansible-playbook-simple
+# ansible-playbook role for systemd 
 
 Install ansible
 
@@ -6,6 +6,6 @@ Install ansible
 
 Run this playbook:
 
-    ansible-playbook -become -i hosts site.yml
+    ansible-playbook -i hosts site.yml
 
 
