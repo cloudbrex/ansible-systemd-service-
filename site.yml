@@ -6,7 +6,6 @@
     - role: systemd
       become: yes
       tags: systemd
-  roles:
     - role: cronjob
       become: yes
       tags: cronjob
