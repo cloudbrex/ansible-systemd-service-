@@ -1,0 +1,14 @@
+---
+
+- name: copy service start file
+  template:
+    src: startwpbootservice.j2 
+    dest: /usr/bin/startwpbootservice.sh
+    mode: 0744
+
+- name: set cronjob at reboot
+  cron:
+     name: "autostart"
+     special_time: reboot
+     job: /usr/bin/startwpbootservice.sh
+
