@@ -4,7 +4,7 @@ After=rc-local.service network-online.target cloud-config.service basic.target s
 
 [Service]
 Type=oneshot
-ExecStartPre=timeout 120 /bin/bash -c \ 'until stat /var/lib/cloud/instance/boot-finished 2>/dev/null; do echo waiting ...; sleep 1; done'
+ExecStartPre=timeout 120 /bin/bash -c 'until stat /var/lib/cloud/instance/boot-finished 2>/dev/null; do echo waiting ...; sleep 1; done'
 ExecStart=/usr/bin/nohup /usr/bin/wpbootstrap.sh
 PIDFile=/var/run/wpbootstrap.pid
 
